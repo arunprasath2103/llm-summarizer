@@ -9,7 +9,7 @@ Parses messy, legacy PubMed-style JSON, cleans it, and asks a locally hosted
 - Retries with exponential backoff + jitter on timeouts, dropped connections, 429 and 5xx
 - Fails fast, with a clear message, if the server is down or the model name is wrong
 - One dependency (`requests`), Python 3.8+
-
+- 
 ## Repository layout
 
 ```
@@ -192,5 +192,6 @@ The script was exercised against this mock server (dropped connection, 503, read
 45 s response, dead server, wrong model name, circuit breaker). It has not been benchmarked on
 real DGX Spark hardware, so validate the Docker settings on your machine and adjust
 `GPU_UTIL`, `MAX_LEN` and `MAX_SEQS` if needed.
-#   l l m - s u m m a r i z e r  
+#   l l m - s u m m a r i z e r 
+ 
  
